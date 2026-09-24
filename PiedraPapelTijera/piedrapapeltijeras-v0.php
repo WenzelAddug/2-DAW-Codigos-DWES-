@@ -33,17 +33,16 @@ function calcularGanador (String $valor1, String $valor2): int{
     // Miro qué ficha pierde contra la ficha del jugador 1
     switch ($valor1) {
         case PIEDRA:
-            $fichaQuePierde = TIJERAS;   // La piedra gana a las tijeras
+            $fichaQuePierde = TIJERAS;   
             break;
         case PAPEL:
-            $fichaQuePierde = PIEDRA;    // El papel gana a la piedra
+            $fichaQuePierde = PIEDRA;    
             break;
         case TIJERAS:
-            $fichaQuePierde = PAPEL;     // Las tijeras ganan al papel
+            $fichaQuePierde = PAPEL;     
             break;
     }
 
-    // Si el jugador 2 tiene esa ficha, gana el jugador 1. Si no, gana el jugador 2
     return ($valor2 == $fichaQuePierde) ? 1 : 2;
 }
 /**
@@ -51,9 +50,8 @@ function calcularGanador (String $valor1, String $valor2): int{
  * @return string
  */
 function obtenerFicha (): string {
-   // Guardo las tres fichas en un array
+   
    $fichas = [PIEDRA, PAPEL, TIJERAS];
-   // array_rand devuelve una posición al azar del array (0, 1 o 2)
    $pos = array_rand($fichas);
    return $fichas[$pos];
   }
