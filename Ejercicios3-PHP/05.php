@@ -35,8 +35,9 @@ sort($ganadora);
 
         td {
             border: 1px solid black;
-            padding: 10px;
+            padding: 5px 10px;
             text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -48,10 +49,10 @@ sort($ganadora);
             <?php foreach ($ganadora as $valor) : ?>
                 <td><?= $valor ?></td>
             <?php endforeach; ?>
+            <!-- el complementario va en la misma fila, en la ultima celda -->
+            <td>Complementario <?= $complementario ?></td>
         </tr>
     </table>
-    <br>
-    Complementario <?= $complementario ?>
 </body>
 
 </html>
