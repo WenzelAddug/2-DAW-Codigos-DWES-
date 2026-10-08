@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Jugador</title>
+    <style>
+        body {
+            background-color: #9a9ab6;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            accent-color: #e8582a;
+        }
+
+        .boton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de Jugador</h1>
+
+    <!-- Para poder enviar ficheros tiene que ir por POST y con enctype multipart/form-data -->
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="alias">Alias:</label>
+        <input type="text" name="alias" id="alias" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" min="1" max="120" required>
+
+        <fieldset>
+            <legend>Armas a elegir (puedes elegir varias):</legend>
+            <input type="checkbox" name="armas[]" id="maza" value="Maza">
+            <label for="maza">Maza</label><br>
+            <input type="checkbox" name="armas[]" id="antorcha" value="Antorcha">
+            <label for="antorcha">Antorcha</label><br>
+            <input type="checkbox" name="armas[]" id="martillo" value="Martillo">
+            <label for="martillo">Martillo</label><br>
+            <input type="checkbox" name="armas[]" id="latigo" value="Látigo">
+            <label for="latigo">Látigo</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>¿Practica artes mágicas?</legend>
+            <input type="radio" name="magia" id="si" value="si">
+            <label for="si">Sí</label><br>
+            <input type="radio" name="magia" id="no" value="no" checked>
+            <label for="no">No</label>
+        </fieldset>
+
+        <!-- Tamaño maximo en el cliente: 10 Kbytes (10 * 1024 bytes)
+             Tiene que ir ANTES del input file. No es seguro, tambien se controla en el servidor -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="10240">
+
+        <label for="imagen">Subir imagen:</label>
+        <!-- accept hace que el navegador solo deje elegir ficheros png -->
+        <input type="file" name="imagen" id="imagen" accept="image/png">
+
+        <input type="submit" value="Enviar" class="boton">
+        <input type="reset" value="Borrar" class="boton">
+    </form>
+</body>
+
+</html>
