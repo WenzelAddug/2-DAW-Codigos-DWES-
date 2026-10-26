@@ -33,6 +33,7 @@ if (isset($_SESSION['tarjeta'])) {
     echo "<img src='imagenes/" . $_SESSION['tarjeta'] . ".gif' />\n";
     echo "<h2>SELECCIONE UNA NUEVA TARJETA DE CREDITO </h2><br>\n";
 } else {
+    echo "<H2> NO TIENE FORMA DE PAGO ASIGNADA</H2> </br>\n";
     echo "<h2>SELECCIONE UNA TARJETA DE CREDITO </h2><br>\n";
 }
 
