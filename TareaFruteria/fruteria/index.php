@@ -6,50 +6,45 @@ session_start();
 // 'pedidos' => array asociativo fruta => cantidad
 
 
-// Nuevo cliente: anoto en la sesión su nombre y creo su tabla de pedidos vacía
+// 2º Nuevo cliente: anoto en la sesión su nombre y creo su tabla de pedidos vacía
 if (isset($_GET['cliente'])) {
-    $_SESSION['cliente'] = $_GET['cliente'];
-    $_SESSION['pedidos'] = array();
+    $_SESSION['cliente'] =  $_GET['cliente']; //añadimos el cliente
+    $_SESSION['pedidos'] = [];
 }
 
-// No hay definido un cliente todavía en la session
+// 1º No hay definido un cliente todavía en la session 
 if (!isset($_SESSION['cliente'])) {
-    require_once 'bienvenida.php';
-    exit();
+    include"bienvenida.php"; //añadimos la pagina principal para que el usuario se registre
+    die();
 }
 
 
-// Proceso las acciones
+// 3º Proceso las acciones 
 if (isset($_POST["accion"])) {
 
 switch ($_POST["accion"]) {
      case " Anotar ":
+        $fruta = $_POST["fruta"];
+        $cantidad = $_POST["cantidad"];
         // Actualizo la tabla de pedidos en la sesión
-        $fruta = $_POST['fruta'];
-        $cantidad = intval($_POST['cantidad']);
-        if ($cantidad > 0) {
-            // Si ya habia pedido esa fruta se suma a lo que tenia
-            if (isset($_SESSION['pedidos'][$fruta])) {
-                $_SESSION['pedidos'][$fruta] += $cantidad;
-            } else {
-                $_SESSION['pedidos'][$fruta] = $cantidad;
-            }
+        if(isset($_SESSION["pedidos"][$fruta])){
+            $_SESSION["pedidos"][$fruta] += $cantidad;
+        }else{
+            $_SESSION["pedidos"][$fruta] = $cantidad;
         }
         break;
     case " Anular ":
+        $fruta = $_POST["fruta"];
         // Vacío la tabla de pedidos en la sesión
-        $_SESSION['pedidos'] = array();
+        unset($_SESSION["pedidos"][$fruta]);
         break;
     case " Terminar ":
-           // Destruyo la sesión y vuelvo a la página de bienvenida
-        // Primero guardo la tabla para enseñarla en la despedida
+// Destruyo la sesión y vuelvo a la página de bienvenida
         $compraRealizada = htmlTablaPedidos();
-        $_SESSION = array();
-        session_destroy();
-        require_once 'despedida.php';
+        include_once "despedida.php";
+        session_destroy ();
         exit();
         break;
-
 
 }
 }
@@ -60,16 +55,12 @@ require_once 'compra.php';
 
 // Función axiliar que genera una tabla HTML a partir  la tabla de pedidos
 // Almacenada en la sesión
-function htmlTablaPedidos(): string
-{
+function htmlTablaPedidos(): string {
     $msg = "";
-    if (isset($_SESSION['pedidos']) && count($_SESSION['pedidos']) > 0) {
-        $msg .= "Este es su pedido :<br>";
-        $msg .= "<table border='1'>";
-        foreach ($_SESSION['pedidos'] as $fruta => $cantidad) {
-            $msg .= "<tr><td><b>$fruta</b></td><td>$cantidad</td></tr>";
-        }
-        $msg .= "</table>";
+    $msg .="<table>";
+    foreach ($_SESSION["pedidos"] as $fruta => $cantidad) {
+     $msg .= "<tr><td>". $fruta."</td><td>".$cantidad. "</td></tr>";
     }
+    $msg .= "</table>";
     return $msg;
 }
