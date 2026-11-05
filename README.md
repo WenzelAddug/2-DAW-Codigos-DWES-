@@ -17,6 +17,7 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [TareaFruteria](TareaFruteria) | Frutería con sesiones: el cliente va anotando su pedido |
 | [ImagenesTarjetas](ImagenesTarjetas) | Elegir forma de pago guardándola en una cookie y en una sesión |
 | [EjercicioMiniCasino](EjercicioMiniCasino) | Minicasino de par/impar con sesiones y cookie de visitas |
+| [TareaControlNotas](TareaControlNotas) | Tarea de control: consulta de notas con login, roles alumno/profesor y bloqueo tras 5 fallos |
 | [EjercicioPOO](EjercicioPOO) | Ejercicios de Programación Orientada a Objetos (CuentaBancaria, Reloj y Coche) |
 
 ## Cómo probarlos
