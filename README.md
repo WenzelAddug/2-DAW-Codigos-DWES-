@@ -9,6 +9,7 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | Carpeta | Qué es |
 |---|---|
 | [Ejercicios3-PHP](Ejercicios3-PHP) | Ejercicios de arrays en PHP (máximos, bonoloto, países, tabla, diagrama de barras...) |
+| [Ejercicios5-PHP](Ejercicios5-PHP) | Funciones de librería: letra del NIF, registro de usuarios con contraseña segura y generador de calendarios |
 | [PiedraPapelTijera](PiedraPapelTijera) | Juego de piedra, papel o tijera entre dos jugadores |
 | [CincoDados](CincoDados) | Juego de cinco dados entre dos jugadores |
 | [Formulario-con-Imagen](Formulario-con-Imagen) | Formulario con validación de datos y subida de una imagen |
