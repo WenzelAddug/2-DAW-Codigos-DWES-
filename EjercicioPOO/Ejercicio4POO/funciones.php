@@ -22,6 +22,7 @@ function cargarbicis(): array
 function mostrartablabicis($tabla): string
 {
     $cadena = "<table><tr><th>Id</th><th>Coord X</th><th>Cood Y</th><th>Bateria</th></tr>";
+   
     // solo muestro las bicis operativas
     foreach ($tabla as $bici) {
         if ($bici->operativa) {
@@ -49,6 +50,7 @@ function mostrartablabicis($tabla): string
 function bicimascercana($tabla, $x, $y)
 {
     $bicicerca = null;
+    
     $distanciaMin = 0;
     foreach ($tabla as $bici) {
         // las que no estan operativas no cuentan

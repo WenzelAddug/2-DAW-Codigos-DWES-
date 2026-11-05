@@ -54,10 +54,12 @@ class BiciElectrica {
      * Se aplica la fórmula de distancia entre dos puntos. 
      */
     public function distancia($x, $y) {
+        //COMPLETAR ----------------
         // d = raiz cuadrada de ( (x2-x1)^2 + (y2-y1)^2 )
         $dx = $x - $this->coordx;
         $dy = $y - $this->coordy;
         return sqrt(pow($dx, 2) + pow($dy, 2));
+        return 10;
     }
 }
 

@@ -7,6 +7,7 @@ if (!empty($_GET['coordx']) && !empty($_GET['coordy'])) {
     $consulta = true;
     $biciRecomendada = bicimascercana($tabla, $_GET['coordx'], $_GET['coordy']);
 }
+
 ?>
 <!DOCTYPE html>
 <head>
@@ -29,7 +30,7 @@ if (!empty($_GET['coordx']) && !empty($_GET['coordy'])) {
   <?php if ($biciRecomendada != null) : ?>
     <h2> Bicicleta disponible más cercana es <?= $biciRecomendada ?> </h2>
   <?php else : ?>
-    <h2> NO HAY BICI disponible </h2>
+<?= "NO HAY BICI --" ?>
   <?php endif ?>
   <button onclick="history.back()"> Volver </button>
 <?php else : ?>
