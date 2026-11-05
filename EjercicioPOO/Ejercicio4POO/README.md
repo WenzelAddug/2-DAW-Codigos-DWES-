@@ -13,7 +13,7 @@ App de alquiler de bicis eléctricas: muestra las bicis operativas y te dice cu�
   `d = √((x2 - x1)² + (y2 - y1)²)`
 - **`mostrartablabicis`**: recorre la tabla de objetos y solo pinta las bicis que están operativas.
 - **`bicimascercana`**: recorre las bicis operativas y se queda con la que tiene menor distancia (si no hay ninguna devuelve `null`).
-- **`consultabicis.php`**: si llegan `coordx` y `coordy` por GET muestra la bici más cercana y un botón **Volver**; si no, muestra el formulario.
+- **`consultabicis.php`**: si llegan `coordx` y `coordy` por GET muestra la bici más cercana y un botón **Volver**, si no, muestra el formulario.
 
 ## Ejemplo
 Con la ubicación `x = 1000`, `y = 1000`:
