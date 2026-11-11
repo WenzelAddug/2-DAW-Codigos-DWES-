@@ -1,7 +1,4 @@
 <?php
-// ---------------------------------------------------------
-// 3. EJEMPLO DE USO (Script Principal)
-// ---------------------------------------------------------
 require_once 'conexion.php';
 require_once 'Producto.php';
 require_once 'ProductoRepository.php';
@@ -10,63 +7,56 @@ require_once 'ProductoRepository.php';
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prueba PDO - CRUD de Productos</title>
+    <title>Prueba PDO</title>
 </head>
 <body>
 <?php
 try {
-    // A. Conexión
     $pdo = new PDO($dsn, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Instanciamos el repositorio
     $repo = new ProductoRepository($pdo);
 
-    echo "<h2>--- Inicio del CRUD ---</h2>";
+    echo "<h2>CRUD de productos</h2>";
 
-    // 1. CREATE: Crear un nuevo producto
+    // Crear
     $nuevoProd = new Producto();
     $nuevoProd->nombre = "Teclado Mecánico";
     $nuevoProd->precio = 59.99;
     $nuevoProd->stock = 10;
 
     $idGenerado = $repo->crear($nuevoProd);
-    echo "✅ Producto creado: " . $nuevoProd->info() . "<br>";
+    echo "Producto creado: " . $nuevoProd->info() . "<br>";
 
-    // 2. READ: Listar todos
+    // Listar
     echo "<br><strong>Lista de productos:</strong><br>";
     $lista = $repo->obtenerTodos();
     foreach ($lista as $p) {
         echo "- " . $p->info() . "<br>";
     }
 
-    // 3. UPDATE: Modificar el producto creado
-    // Primero lo recuperamos por ID para asegurarnos que tenemos el objeto correcto
+    // Actualizar
     $prodParaEditar = $repo->obtenerPorId($idGenerado);
-
     if ($prodParaEditar) {
-        $prodParaEditar->precio = 45.00; // Bajamos el precio
-        $prodParaEditar->stock  = 9;     // Vendimos uno
-
+        $prodParaEditar->precio = 45.00;
+        $prodParaEditar->stock = 9;
         $repo->actualizar($prodParaEditar);
-        echo "<br>🔄 Producto actualizado (Nuevo precio: 45.00$).<br>";
+        echo "<br>Producto actualizado (nuevo precio: 45.00$)<br>";
     }
 
-    // 4. READ (Verificación): Vemos el cambio
+    // Comprobar que se ha cambiado
     $prodVerificado = $repo->obtenerPorId($idGenerado);
-    echo "Verificación: " . $prodVerificado->info() . "<br>";
+    echo "Comprobacion: " . $prodVerificado->info() . "<br>";
 
-    // 5. DELETE: Borrar el producto
+    // Borrar
     $filas = $repo->eliminar($idGenerado);
     if ($filas > 0) {
-        echo "<br>🗑️ Producto eliminado correctamente.";
+        echo "<br>Producto eliminado";
     }
-
 } catch (PDOException $e) {
-    echo "Error Grave: " . $e->getMessage();
+    echo "Error: " . $e->getMessage();
 }
 
-// Desconexión (Opcional, PHP lo hace al final del script)
 $pdo = null;
 ?>
 </body>
