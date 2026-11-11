@@ -19,10 +19,11 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [EjercicioMiniCasino](EjercicioMiniCasino) | Minicasino de par/impar con sesiones y cookie de visitas |
 | [TareaControlNotas](TareaControlNotas) | Tarea de control: consulta de notas con login, roles alumno/profesor y bloqueo tras 5 fallos |
 | [EjercicioPOO](EjercicioPOO) | Ejercicios de Programación Orientada a Objetos (CuentaBancaria, Reloj, Coche y BiciElectrica) |
+| [pruebaPDO](pruebaPDO) | Ejemplo sencillo de CRUD con PDO: clase Producto y ProductoRepository (patrón DAO) |
 
 ## Cómo probarlos
 1. Copiar la carpeta del ejercicio en `htdocs` de XAMPP (o en la carpeta del servidor que uses).
-2. Arrancar Apache.
+2. Arrancar Apache (y MySQL si el ejercicio usa base de datos).
 3. Abrir en el navegador `http://localhost/<carpeta>/`.
 
 Cada carpeta tiene su propio README explicando el ejercicio.
