@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <p>Hola, Alberto. Esta es la página de inicio del proyecto.</p>
+        <div class="actions">
+            <button type="button" id="btn-aleatorio">Solicitar número aleatorio</button>
+            <p id="resultado" class="resultado" aria-live="polite"></p>
+        </div>
+    </div>
+    <script>
+        const boton = document.getElementById('btn-aleatorio');
+        const resultado = document.getElementById('resultado');
+
+        boton.addEventListener('click', async () => {
+            resultado.textContent = 'Solicitando número…';
+            boton.disabled = true;
+
+            try {
+                const respuesta = await fetch('numero.php', { method: 'GET' });
+
+                if (!respuesta.ok) {
+                    throw new Error('No se pudo obtener el número');
+                }
+
+                const datos = await respuesta.json();
+                resultado.textContent = `Número aleatorio: ${datos.numero}`;
+            } catch (error) {
+                resultado.textContent = 'Error al solicitar el número.';
+                console.error(error);
+            } finally {
+                boton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

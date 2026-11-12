@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Formulario Básico</title>   
+</head>
+<body>
+<form action="procesar00.php?orden=calificacion"  method="get">
+ Nombre:<input name="nombre" type="text"><br>
+ Curso: <input name="curso" type="text"><br>
+ Calificación: <input  name="nota" type="number" min="1" max="10"><br>
+ <input name="EnviarS"   value="Enviar con Submit" type="submit"><br>
+ <button name="EnviarB"  value="Enviar con Botón1"> ENVIAR 1</button>
+ <button name="EnviarB"  value="Enviar con Botón1"> ENVIAR 2</button>
+</form>
+<a href="procesar00.php?orden=sinformulario"> Pulsame </a>
+</body>    
+</html>
