@@ -21,6 +21,10 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [EjercicioPOO](EjercicioPOO) | Ejercicios de Programación Orientada a Objetos (CuentaBancaria, Reloj, Coche y BiciElectrica) |
 | [pruebaPDO](pruebaPDO) | Ejemplo sencillo de CRUD con PDO (clase Producto y ProductoRepository) |
 
+## Soluciones del profesor
+
+En la carpeta [Soluciones de Profesor Alberto](Soluciones%20de%20Profesor%20Alberto) están los ejercicios y ejemplos que hacemos en clase con el profesor Alberto, pero con **sus soluciones** (no es código mío). Se va actualizando después de cada clase.
+
 ## Cómo probarlos
 1. Copiar la carpeta del ejercicio en `htdocs` de XAMPP (o en la carpeta del servidor que uses).
 2. Arrancar Apache (y MySQL si el ejercicio usa base de datos).
