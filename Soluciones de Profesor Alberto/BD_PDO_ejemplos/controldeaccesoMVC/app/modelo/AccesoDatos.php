@@ -30,7 +30,7 @@ class AccesoDatos {
     private function __construct(){
         
         try {
-            $dsn = "mysql:host=localhost;dbname=Prueba00";
+            $dsn = "mysql:host=localhost;dbname=database";
             $this->dbh = new PDO($dsn, "root", "root");
             $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->dbh->setAttribute( PDO::ATTR_EMULATE_PREPARES, FALSE );

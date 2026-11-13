@@ -3,8 +3,8 @@
 
 class Reloj
 {
-    protected $segundos;
-    private $formato24;
+    protected int $segundos;
+    private bool $formato24;
     
     public function __construct ( int $hora, int $minutos, int $segundos){
         $this->segundos = $hora*3600 + $minutos*60 + $segundos;

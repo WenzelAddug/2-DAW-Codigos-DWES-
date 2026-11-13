@@ -3,8 +3,8 @@ include_once 'Reloj.php';
 
 class RelojAlarma extends Reloj
 {
-    private $segundosalarma;
-    private $alarmaActivada;
+    private int $segundosalarma;
+    private bool $alarmaActivada;
 
     public function __construct(int $hora, int $minutos, int $segundos)
     {
@@ -14,7 +14,7 @@ class RelojAlarma extends Reloj
     }
     
     // Nuevo método
-    public function setAlarma ($hora,$minutos):void{
+    public function setAlarma (int $hora,int $minutos):void{
         $this->segundosalarma = $hora * 3600 + $minutos*60;
         $this->alarmaActivada = true;
     }

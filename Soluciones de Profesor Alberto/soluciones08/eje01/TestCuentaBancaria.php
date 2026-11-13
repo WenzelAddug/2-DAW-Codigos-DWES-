@@ -10,6 +10,8 @@ $c1 = new CuentaBancaria(100);
 $c2 = new CuentaBancaria(1900);
 $c3 = new CuentaBancaria();
 
+echo " Total de cuentas creadas ".CuentaBancaria::getNumCuentas();
+
 
 $c1->abono(20);
 $c1->ingreso(10);

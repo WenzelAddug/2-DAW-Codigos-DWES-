@@ -8,6 +8,7 @@ include_once 'app/acciones.php';
 
 // Div con contenido
 $contenido="";
+
 if ($_SERVER['REQUEST_METHOD'] == "GET" ){
     
     if ( isset($_GET['orden'])){
@@ -31,6 +32,7 @@ else {
          }
     }
 }
+
 $contenido .= mostrarDatos();
 // Muestro la página principal
 include_once "app/layout/principal.php";

@@ -8,9 +8,10 @@ echo " <br> Reloj nº 1 ". $r1->mostrar();
 
 $r1->setAlarma(20,11);
 $r1->activarAlarma(true);
-$r1->activarAlarma(false);
+//$r1->activarAlarma(false);
 for ($i=1; $i<= 120; $i++){
     $r1->tictac();
+    echo $i. "<br>";
 }
 echo " <br> Reloj nº 1 ". $r1->mostrar();
 

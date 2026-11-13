@@ -7,14 +7,18 @@ class CuentaBancaria
     // Atributos de Clase
     // -------------------------------------
     
-    private $saldo;          // Saldo actual de la cuenta
-    private $numMovimientos; // Número de movimientos realizados
+    private int $saldo;          // Saldo actual de la cuenta
+    private int $numMovimientos; // Número de movimientos realizados
     private static $numCuentas = 0; // Número de cuentas creadas
     
     // -------------------------------------
     //   METODOS:
     // -------------------------------------
     
+    public static function getNumCuentas ():int {
+       return self::$numCuentas;
+    }
+
     // Constructores
     public function __construct(int $saldo = 0){
         $this->saldo = $saldo;
@@ -24,7 +28,7 @@ class CuentaBancaria
     }
     
     // Redifino el método __get 
-    public function __get($atributo){
+    public function __get(string $atributo){
         if(property_exists($this, $atributo)) {
             return $this->$atributo;
         }
