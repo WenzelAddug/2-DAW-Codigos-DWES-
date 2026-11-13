@@ -20,6 +20,7 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [TareaControlNotas](TareaControlNotas) | Tarea de control: consulta de notas con login, roles alumno/profesor y bloqueo tras 5 fallos |
 | [EjercicioPOO](EjercicioPOO) | Ejercicios de Programación Orientada a Objetos (CuentaBancaria, Reloj, Coche y BiciElectrica) |
 | [pruebaPDO](pruebaPDO) | Ejemplo sencillo de CRUD con PDO (clase Producto y ProductoRepository) |
+| [TareaCRUDProductos](TareaCRUDProductos) | Tarea: CRUD completo sobre la BD ProductosDB (almacén de productos) adaptando el crud-usuariosPDO de clase |
 
 ## Soluciones del profesor
 
