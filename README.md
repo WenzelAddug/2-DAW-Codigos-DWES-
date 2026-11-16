@@ -21,6 +21,7 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [EjercicioPOO](EjercicioPOO) | Ejercicios de Programación Orientada a Objetos (CuentaBancaria, Reloj, Coche y BiciElectrica) |
 | [pruebaPDO](pruebaPDO) | Ejemplo sencillo de CRUD con PDO (clase Producto y ProductoRepository) |
 | [TareaCRUDProductos](TareaCRUDProductos) | Tarea: CRUD completo sobre la BD ProductosDB (almacén de productos) adaptando el crud-usuariosPDO de clase |
+| [Ejemplo Examen 16-11-2026](Ejemplo%20Examen%2016-11-2026) | Ejemplo de examen final de PHP: buscador de vuelos con PDO (BD airflyDB), MVC y cookie de consultas |
 
 ## Soluciones del profesor
 
