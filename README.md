@@ -22,6 +22,8 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [pruebaPDO](pruebaPDO) | Ejemplo sencillo de CRUD con PDO (clase Producto y ProductoRepository) |
 | [TareaCRUDProductos](TareaCRUDProductos) | Tarea: CRUD completo sobre la BD ProductosDB (almacén de productos) adaptando el crud-usuariosPDO de clase |
 | [Ejemplo Examen 16-11-2026](Ejemplo%20Examen%2016-11-2026) | Ejemplo de examen final de PHP: buscador de vuelos con PDO (BD airflyDB), MVC y cookie de consultas |
+| [TareaControlPedidos](TareaControlPedidos) | Tarea: control de acceso a la BD etienda con PDO y MVC, lista de pedidos del cliente con el total y contador de veces |
+| [PruebaFinalPHP](PruebaFinalPHP) | Prueba final de PHP: CRUD de usuarios (BD usuariosctl) con PIN de acceso por sesión de 5 minutos, incrementar saldo y actualizar bloqueos |
 
 ## Soluciones del profesor
 
