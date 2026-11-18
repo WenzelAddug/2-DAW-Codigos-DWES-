@@ -8,11 +8,8 @@ if ($valor % 2 !== 0) {
 } 
 // Guardar el valor en un fichero donde se guarden el historial de números generados
 
-file_put_contents('numero.txt', $valor);
-// Leer el valor del archivo
-$valor = file_get_contents('numero.txt');
+file_put_contents(HISTORIAL, $valor."\n", FILE_APPEND);
 echo json_encode([
     'numero' => $valor,
 ]);
-// Borrar el archivo
-unlink('numero.txt');
+

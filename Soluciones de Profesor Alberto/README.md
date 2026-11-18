@@ -10,7 +10,7 @@ La carpeta se va actualizando después de cada clase con él, así que puede que
 
 | Carpeta | Qué hay |
 |---|---|
-| `soluciones01` … `soluciones08` | Soluciones de cada boletín de ejercicios |
+| `soluciones01` … `soluciones09` | Soluciones de cada boletín de ejercicios (en `soluciones09` está el control de BD `ControlDB-I`: login de clientes y listado de sus pedidos) |
 | `ejemplosformularios` | Ejemplos de formularios |
 | `POO_ejemplos` | Ejemplos de programación orientada a objetos (herencia, interfaces, traits, métodos mágicos...) |
 | `BD_PDO_ejemplos` | Ejemplos de acceso a base de datos con PDO |
