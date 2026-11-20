@@ -25,6 +25,7 @@ Todo está hecho en **PHP**, partiendo de los ejemplos y apuntes del profesor.
 | [TareaControlPedidos](TareaControlPedidos) | Tarea: control de acceso a la BD etienda con PDO y MVC, lista de pedidos del cliente con el total y contador de veces |
 | [PruebaFinalPHP](PruebaFinalPHP) | Prueba final de PHP: CRUD de usuarios (BD usuariosctl) con PIN de acceso por sesión de 5 minutos, incrementar saldo y actualizar bloqueos |
 | [Ejer001](Ejer001) | Ejemplo de control de BD y POO: bajar un 10% el precio de los productos marcados (BD Almacendb), solo una vez al día controlado con un cookie |
+| [examen2ev](examen2ev) | Ejemplo de examen (III): contador con sesión, información de países con arrays y aplicación de compras con la BD comprasdb (carpeta examarzo) |
 
 ## Soluciones del profesor
 
