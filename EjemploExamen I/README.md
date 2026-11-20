@@ -1,4 +1,6 @@
-# Ejer001 - Control sobre BD y POO en PHP
+# Ejemplo Examen I - Control sobre BD y POO en PHP
+
+(En el enunciado la carpeta se llama `Ejer001`.)
 
 Ejemplo de control de DWES: bajar precios de productos de la BD `Almacendb`.
 

@@ -1,4 +1,4 @@
-# examen2ev - Ejemplo de examen de BD y POO (III)
+# Ejemplo Examen III - BD y POO
 
 Ejemplo de examen de DWES con tres ejercicios.
 
@@ -29,5 +29,5 @@ Casos que controla:
 
 ## Cómo probarlo
 1. Importar `examarzo/comprasdb.sql` en MySQL (usuario `root` / contraseña `root`, se cambia arriba del `AccesoDatos.php`).
-2. Copiar la carpeta `examen2ev` en `htdocs`.
+2. Copiar la carpeta `EjemploExamen III` en `htdocs`.
 3. Abrir `contadorsesion.php`, `infopais.php` y `examarzo/compra.html`.

@@ -1,6 +1,6 @@
-# Prueba Final de PHP - CRUD Usuarios con control de acceso
+# Ejemplo Examen II - CRUD Usuarios con control de acceso
 
-Prueba final de PHP de DWES. Mejoras sobre el ejemplo `crud-usuariosPDO` de clase usando la nueva BD `usuariosctl`, que tiene dos campos nuevos: `bloqueo` y `saldo`.
+Ejemplo de examen II de DWES. Mejoras sobre el ejemplo `crud-usuariosPDO` de clase usando la nueva BD `usuariosctl`, que tiene dos campos nuevos: `bloqueo` y `saldo`.
 
 ## Cambios que he hecho
 1. **Clase Usuario y mostrarDatos**: `Usuario.php` tiene los campos `bloqueo` y `saldo`. La tabla ahora muestra esos dos campos y un checkbox (`marcados[]`) en cada fila para seleccionar uno o varios usuarios. En la vista principal hay dos botones nuevos con `name="orden"`: **Incrementar Saldo** y **Actualizar Bloqueos**.
